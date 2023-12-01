@@ -4,6 +4,7 @@ export class ResponseHandler {
     statusCode: number;
     result: any;
     message: string
+
     constructor(statusCode: number, result: any, message: string) {
         this.statusCode = statusCode;
         this.result = result;
@@ -20,6 +21,7 @@ export const handleResponse = (
     if (info instanceof Error) {
         next(info);
     }
+    
     if (info instanceof ResponseHandler) {
         const { statusCode, message, result } = info;
 
