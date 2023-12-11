@@ -20,3 +20,23 @@ export const getUserStorage = async (filter:any, sort:any) => {
         return new ErrorHandler(500, "Error al obtener usuarios");
     }
 }
+
+export const updateUserStorage = async(id:string, user:Partial<IUser>)=>{
+    try {
+        const updateUser: IUser= await User.findByIdAndUpdate(id,user, {new: true})
+        return updateUser
+    } catch (error) {
+        return new ErrorHandler(500, "Error al actualizar usuario")
+    }
+}
+
+export const deleteUserStorage = async(id:string)=>{
+
+    try {
+        const deleteUser = await User.findByIdAndDelete(id)
+        return deleteUser
+    } catch (error){
+        return new ErrorHandler(500, "Error al eliminar usuario")
+
+    }
+}
