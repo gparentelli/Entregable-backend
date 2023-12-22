@@ -1,6 +1,5 @@
-
 export interface IRepo {
-    name: string;
-    description: string;
-    stars: number;
+  name: string;
+  description: string;
+  score: number;
 }
