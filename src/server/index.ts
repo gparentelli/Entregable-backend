@@ -4,26 +4,22 @@ import { handleError } from "../handlers/error.handler";
 import { handleResponse } from "../handlers/response.handler";
 import router from "./routes/users.routes";
 import reposRouter from "./routes/repos.routes";
-import cors, { CorsOptions } from "cors";
+import cors from "cors";
 
 const app = express();
 
-const corsOptions = {
-  origin: "http://127.0.0.1:5173",
+const allowedOrigins = ["http://localhost:5173", "http://127.0.0.1:5173"];
+const options = {
+  origin: allowedOrigins,
   methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
   credentials: true,
   optionsSuccessStatus: 204,
 };
 
-const allowedOrigins = ["http://localhost:http:127.0.0.1:5173/"];
-const options: cors.CorsOptions = {
-  origin: allowedOrigins,
-};
-
-app.use(cors(corsOptions));
+app.use(cors(options));
 
 app.use(express.json());
-//midelwares
+//middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
