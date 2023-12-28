@@ -10,7 +10,7 @@ import { createRepoMiddleware } from "../../middleware/repos.middlewares";
 const reposRouter = Router();
 
 reposRouter.get("/repos", getRepo);
-reposRouter.post("/repos", createRepo, createRepoMiddleware);
+reposRouter.post("/repos",createRepoMiddleware, createRepo );
 reposRouter.put("/repos/:id", updateRepo);
 reposRouter.delete("/repos/:id", deleteRepo);
 

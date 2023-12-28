@@ -31,18 +31,7 @@
 					"response": []
 				},
 				{
-					"name": "GetOneUser",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": ""
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "CreateUser",
+					"name": "•CreateUser",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -72,7 +61,7 @@
 					"response": []
 				},
 				{
-					"name": "UpdateUser",
+					"name": "•UpdateUser",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -86,7 +75,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/users/658dd476c8a37c999eaceba6",
+							"raw": "http://localhost:3000/api/v1/users/658e079cdcbed625bd6b5f31",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -96,19 +85,19 @@
 								"api",
 								"v1",
 								"users",
-								"658dd476c8a37c999eaceba6"
+								"658e079cdcbed625bd6b5f31"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "DeleteUser",
+					"name": "•DeleteUser",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/users/658dd04fb6a6c49cdaab3a60",
+							"raw": "http://localhost:3000/api/v1/users/658e079cdcbed625bd6b5f31",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -118,98 +107,7 @@
 								"api",
 								"v1",
 								"users",
-								"658dd04fb6a6c49cdaab3a60"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Errors Users",
-			"item": [
-				{
-					"name": "GetAllError",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/users",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getOneUserError",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "CreateUserError",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/users?:id=",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"users"
-							],
-							"query": [
-								{
-									"key": ":id",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "UpdateUserError",
-					"request": {
-						"method": "PUT",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "DeleteUserError",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/users/658c8e8704996191a039a7d3",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"users",
-								"658c8e8704996191a039a7d3"
+								"658e079cdcbed625bd6b5f31"
 							]
 						}
 					},
@@ -221,12 +119,12 @@
 			"name": "Repos",
 			"item": [
 				{
-					"name": "GetAllRepos",
+					"name": "•GetAllRepos",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/users",
+							"raw": "http://localhost:3000/api/v1/repos",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -235,43 +133,7 @@
 							"path": [
 								"api",
 								"v1",
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GetOneRepo",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/users/:id/1561955",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"users",
-								":id",
-								"1561955"
-							],
-							"query": [
-								{
-									"key": null,
-									"value": "658b567f5674c2f23f950b20",
-									"disabled": true
-								}
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"repos"
 							]
 						}
 					},
@@ -282,8 +144,17 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"repositorio_github\",\r\n    \"description\": \"repositorioconapidegithub\",\r\n    \"stars\": \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/users/:id/1561955",
+							"raw": "http://localhost:3000/api/v1/repos",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -292,84 +163,19 @@
 							"path": [
 								"api",
 								"v1",
-								"users",
-								":id",
-								"1561955"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"repos"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "UpdateRepo",
+					"name": "•UpdateRepo",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:4000/user/:id",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "4000",
-							"path": [
-								"user",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DeleteRepo",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:4000/user/:id",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "4000",
-							"path": [
-								"user",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Errors Repos",
-			"item": [
-				{
-					"name": "GetAllReposError",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/user/:id/1561955",
+							"raw": "http://localhost:3000/api/v1/repos/6582216a20afe04a3e625d24",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -378,49 +184,32 @@
 							"path": [
 								"api",
 								"v1",
-								"user",
-								":id",
-								"1561955"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"repos",
+								"6582216a20afe04a3e625d24"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "getOneRepoError",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "CreateRepoError",
-					"request": {
-						"method": "POST",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "UpdateRepoError",
-					"request": {
-						"method": "PUT",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "DeleteRepoError",
+					"name": "•DeleteRepo",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/repos/6582216a20afe04a3e625d24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"repos",
+								"6582216a20afe04a3e625d24"
+							]
+						}
 					},
 					"response": []
 				}
